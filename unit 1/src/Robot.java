@@ -28,6 +28,8 @@ class Robot extends Canvas
       upperBody(window);
       lowerBody(window);
       legs(window);
+      arms(window);
+      face(window);
 
       //call head method
       
@@ -68,6 +70,23 @@ class Robot extends Canvas
    {
 	   window.setColor(Color.yellow);
 	   window.fillRect(360, 350, 20,100);
+	   window.fillRect(420, 350, 20, 100);
 	   
+   }
+   
+   public void arms (Graphics window)
+   {
+	   window.fillRect(250, 200, 100, 20);
+	   window.fillRect(450, 200, 100, 20);
+   }
+   
+   public void face (Graphics window)
+   {
+	   window.setColor(Color.RED);
+	   window.drawArc(350, 80, 100, 100, 235, 75);
+	   window.setColor(Color.BLACK);
+	   window.fillOval(360,150, 10, 10);
+	   window.fillOval(430, 150, 10, 10);
+	   window.fillRect(395, 50, 10, 50);
    }
 }
